@@ -15,3 +15,6 @@ It's important to give proper credit. Add links to any repo that inspired you or
 
 ###important Info
 This is a data analysis project using Python and its dependent modules. Please be sure to learn about Python before making any changes to this project. Good Luck and thank you for contributing.
+
+### Contact Info
+Please be sure to include your contact info so we can reach out to you in case of any questions/comments.
