@@ -222,6 +222,6 @@ def main():
         if restart.lower() != 'yes':
             break
 
-
+# This is the main method - this is the method that will be invoked first upon calling this class.
 if __name__ == "__main__":
 	main()
