@@ -210,7 +210,6 @@ def main():
         print('The entered values for city, month and day are {}, {}, {}'.format(city, month, day))
 
         df = load_data(city, month, day)
-        #print(df)
 
         time_stats(df)
         station_stats(df)
