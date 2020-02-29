@@ -205,6 +205,9 @@ def print_raw_data(df):
         print('-'*40)
         see_raw_data = input(raw_data_question)
 
+def end_routine(df):
+    print('Thank you for exploring the bike share data with us. Hope you got some valuable insights using this...')
+
 def main():
     while True:
         city, month, day = get_filters()
@@ -217,6 +220,7 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
         print_raw_data(df)
+        end_routine(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
