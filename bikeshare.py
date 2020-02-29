@@ -19,13 +19,14 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city_question = 'Please enter the name of city that you want to explore data - chicago, new york city or washington.\n'
+    city_message = 'Please consider entering city names as titles. ex: Chicago, New York City....\n'
     city = input(city_question)
     if city not in('Chicago', 'New York City', 'Washington'):
-        print('Please consider entering city names as titles. ex: Chicago, New York City....\n')
+        print(city_message)
     while city.lower() not in ('chicago', 'new york city', 'washington'):
         city = input(city_question)
         if city not in('Chicago', 'New York City', 'Washington'):
-            print('Please consider entering city names as titles next time. ex: Chicago, New York City....\n')
+            print(city_message)
 
 
 
@@ -204,19 +205,22 @@ def print_raw_data(df):
         print('-'*40)
         see_raw_data = input(raw_data_question)
 
+def end_routine(df):
+    print('Thank you for exploring the bike share data with us. Hope you got some valuable insights using this...')
+
 def main():
     while True:
         city, month, day = get_filters()
         print('The entered values for city, month and day are {}, {}, {}'.format(city, month, day))
 
         df = load_data(city, month, day)
-        #print(df)
 
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
         print_raw_data(df)
+        end_routine(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
